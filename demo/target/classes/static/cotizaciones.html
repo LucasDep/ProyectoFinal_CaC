@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final - Cotizaciones</title>
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--Stylesheet CSS-->
+    <link rel="stylesheet" href="./css/cotizaciones.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!--==============ASIDE==============-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/Green_logo.png">
+                    <h2>DEPI<span class="success">ERRO</span></h2>
+                </div>
+
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="./index.html">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Tablero</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Cotizaciones</h3>
+                </a>
+                <a href="./notas.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Notas</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">more_horiz</span>
+                    <h3>Próximamente</h3>
+                </a>
+                <!--
+                <a href="#">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>Add Product</h3>
+                </a>
+                -->
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Log out</h3>
+                </a>
+                
+            </div>
+        </aside>
+        <!--==============ASIDE END==============-->
+        <!--==============MAIN==============-->
+        <main id="appDolar">
+            <h1>Cotizaciones</h1>
+
+            <!--<div class="date">
+                <input type="date">
+            </div>-->
+            <br>
+
+            <!--==============INSIGHTS END==============-->
+            <div class="insights">
+                <!--------SALES-------->
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>{{dolarOficial.nombre}}</h3>
+                            <p class="text-muted">Compra:</p>
+                            <h1>${{dolarOficial.compra}}</h1>
+                            <p class="text-muted">Venta:</p>
+                            <h1>${{dolarOficial.venta}}</h1>
+                        </div>
+                        
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24 Horas</small>
+                </div>
+                <!--------SALES END-------->
+                <!--------EXPENSES-------->
+                <div class="expenses">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>{{dolarBlue.nombre}}</h3>
+                            <p class="text-muted">Compra:</p>
+                            <h1>${{dolarBlue.compra}}</h1>
+                            <p class="text-muted">Venta:</p>
+                            <h1>${{dolarBlue.venta}}</h1>
+                        </div>
+                        
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24 Horas</small>
+                </div>
+                <!--------EXPENSES END-------->
+                <!--------INCOME-------->
+                <div class="income">
+                    <span class="material-icons-sharp">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>{{dolarBolsa.nombre}}</h3>
+                            <p class="text-muted">Compra:</p>
+                            <h1>${{dolarBolsa.compra}}</h1>
+                            <p class="text-muted">Venta:</p>
+                            <h1>${{dolarBolsa.venta}}</h1>
+                        </div>
+                        
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>44%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24 Horas</small>
+                </div>
+                <!--------INCOME END-------->
+
+            </div>          
+            <!--==============INSIGHTS END==============-->
+            <!--==============RECENT ORDERS==============-->
+            <div class="recent-orders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Compra</th>
+                            <th>Venta</th>
+                            <th>Agencia</th>
+                            <th>Variacion</th>
+                        </tr>
+                    </thead>
+
+                    <tbody >
+                        <tr><!--Dolar Oficial-->
+                            <td>{{dolarOficial.nombre}}</td>
+                            <td>{{dolarOficial.compra}}</td>
+                            <td>{{dolarOficial.venta}}</td>
+                            <td>{{dolarOficial.agencia}}</td>       
+                            <td>{{dolarOficial.variacion}}</td>       
+
+
+                        </tr>
+                        <tr><!--Dolar Blue-->
+                            <td>{{dolarBlue.nombre}}</td>
+                            <td>{{dolarBlue.compra}}</td>
+                            <td>{{dolarBlue.venta}}</td>
+                            <td>{{dolarBlue.agencia}}</td>       
+                            <td>{{dolarBlue.variacion}}</td>       
+       
+                        </tr>
+                        <tr><!--Dolar Soja-->
+                            <td>{{dolarSoja.nombre}}</td>
+                            <td>{{dolarSoja.compra}}</td>
+                            <td>{{dolarSoja.venta}}</td>
+                            <td>{{dolarSoja.agencia}}</td>       
+                            <td>{{dolarSoja.variacion}}</td>       
+        
+                        </tr>  
+                        <tr><!--Dolar CLL-->
+                            <td>{{dolarCLL.nombre}}</td>
+                            <td>{{dolarCLL.compra}}</td>
+                            <td>{{dolarCLL.venta}}</td>
+                            <td>{{dolarCLL.agencia}}</td>       
+                            <td>{{dolarCLL.variacion}}</td>       
+         
+                        </tr>
+                        <tr><!--Dolar Bolsa-->
+                            <td>{{dolarBolsa.nombre}}</td>
+                            <td>{{dolarBolsa.compra}}</td>
+                            <td>{{dolarBolsa.venta}}</td>
+                            <td>{{dolarBolsa.agencia}}</td>       
+                            <td>{{dolarBolsa.variacion}}</td>       
+       
+                        </tr>
+                        <tr><!--Dolar Bitcoin-->
+                            <td>{{bitcoin.nombre}}</td>
+                            <td>{{bitcoin.compra}}</td>
+                            <td>{{bitcoin.venta}}</td>
+                            <td>{{bitcoin.agencia}}</td>       
+                            <td>{{bitcoin.variacion}}</td>       
+      
+                        </tr>
+                        <tr><!--Dolar Turista-->
+                            <td>{{dolarTurista.nombre}}</td>
+                            <td>{{dolarTurista.compra}}</td>
+                            <td>{{dolarTurista.venta}}</td>
+                            <td>{{dolarTurista.agencia}}</td>       
+                            <td>{{dolarTurista.variacion}}</td>       
+                        </tr>    
+                    </tbody> 
+
+                </table>
+                
+            </div>
+            <!--==============RECENT ORDERS END==============-->
+            
+        </main>
+        <!--==============MAIN END==============-->
+        <!--==============RIGHT==============-->
+        <div class="right">
+            <!--==============TOP==============-->
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Lucas</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./images/FotoPerfil.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--==============TOP END==============-->
+            <!--==============RECENT UPDATES==============-->
+
+            <div class="recent-updates">
+                <h2>Noticias Recientes</h2>
+                <div class="scrollbar">
+                    <div class="updates" id="appNoticias">
+
+                        <div class="update" v-for="noticia in noticias">
+                            <div class="profile-photo">
+                                <img v-bind:src="noticia.urlToImage" alt="">
+                            </div>
+                            <div class="message">
+                                <a v-bind:href="noticia.url" target="_blank"><b>{{noticia.title}}</b> {{noticia.author}}</a>
+                                <small class="text-muted">Published at {{noticia.publishedAt}}</small>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--==============RECENT UPDATES END==============-->
+            <!--==============SALES ANALYTICS==============-->
+            <div class="sales-analytics">
+                <h2>Contacto</h2>
+                <a href="https://www.linkedin.com/in/lucas-depierro-4464a3207/" target="_blank">
+                    <div class="item linkedin">
+                        <div class="icon">
+                            <span class="logo"><img src="./images/linkedinLogo.png" alt="linkedinLogo"></span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>LinkedIn</h3>
+                                <small class="text-muted">Fullstack Developer</small>
+                            </div>
+                            <h5 class="success"></h5>
+                            <h3></h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/LucasDep?tab=repositories" target="_blank">
+                    <div class="item github">
+                        <div class="icon">
+                            <span class="logo"><img src="./images/gitHubLogo.png" alt="gitHubLogo"></span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>GitHub</h3>
+                                <small class="text-muted">/LucasDep</small>
+                            </div>
+                            <h5 class="danger"></h5>
+                            <h3></h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="./PDF/LUCAS20DEPIERRO_CV.pdf" target="_blank">
+                    <div class="item Contacto">
+                        <div class="icon">
+                            <span class="material-icons-sharp">person</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Curriculum Vitae</h3>
+                                <small class="text-muted">Visualizar PDF</small>
+                            </div>
+                            <h5 class="success"></h5>
+                            <h3></h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mailto:luke2508@hotmail.com">
+                    <div class="item add-product">
+                            <div>
+                                <span class="material-icons-sharp">mail</span>
+                                <h3>Enviar Correo</h3>
+                            </div>
+                    </div>
+                </a>
+
+            </div>
+            <!--==============SALES ANALYTICS END==============-->
+
+        </div>
+        <!--==============RIGHT END==============-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
